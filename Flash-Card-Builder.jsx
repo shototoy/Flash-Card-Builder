@@ -15,6 +15,7 @@ export default function FlashcardBuilder() {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
   const [type, setType] = useState('identification');
+  const [editingStack, setEditingStack] = useState(null);
 
   const handleImportJSON = (e) => {
     const file = e.target.files[0];
@@ -86,22 +87,43 @@ export default function FlashcardBuilder() {
       return;
     }
 
-    const subjectExists = subjects.find(s => s.name === currentSubject);
-    if (subjectExists) {
-      const topicExists = subjectExists.topics.find(t => t.name === currentTopic);
-      if (topicExists) {
-        topicExists.cards = currentCards;
-      } else {
-        subjectExists.topics.push({ name: currentTopic, cards: currentCards });
-      }
-    } else {
-      subjects.push({
-        name: currentSubject,
-        topics: [{ name: currentTopic, cards: currentCards }]
+    if (editingStack) {
+      const { oldSubject, oldTopic } = editingStack;
+      const updated = subjects.map(s => {
+        if (s.name === oldSubject) {
+          return {
+            ...s,
+            name: currentSubject,
+            topics: s.topics.map(t => {
+              if (t.name === oldTopic) {
+                return { name: currentTopic, cards: currentCards };
+              }
+              return t;
+            })
+          };
+        }
+        return s;
       });
+      setSubjects(updated);
+      setEditingStack(null);
+    } else {
+      const subjectExists = subjects.find(s => s.name === currentSubject);
+      if (subjectExists) {
+        const topicExists = subjectExists.topics.find(t => t.name === currentTopic);
+        if (topicExists) {
+          topicExists.cards = currentCards;
+        } else {
+          subjectExists.topics.push({ name: currentTopic, cards: currentCards });
+        }
+      } else {
+        subjects.push({
+          name: currentSubject,
+          topics: [{ name: currentTopic, cards: currentCards }]
+        });
+      }
+      setSubjects([...subjects]);
     }
 
-    setSubjects([...subjects]);
     setCurrentSubject('');
     setCurrentTopic('');
     setCurrentCards([]);
@@ -138,6 +160,17 @@ export default function FlashcardBuilder() {
       return s;
     }).filter(s => s.topics.length > 0);
     setSubjects(updated);
+  };
+
+  const editStack = (subjectName, topicName) => {
+    const subject = subjects.find(s => s.name === subjectName);
+    const topic = subject.topics.find(t => t.name === topicName);
+    
+    setCurrentSubject(subjectName);
+    setCurrentTopic(topicName);
+    setCurrentCards([...topic.cards]);
+    setEditingStack({ oldSubject: subjectName, oldTopic: topicName });
+    setScreen('builder');
   };
 
   if (screen === 'start') {
@@ -230,6 +263,12 @@ export default function FlashcardBuilder() {
                             Quiz
                           </button>
                           <button
+                            onClick={() => editStack(subject.name, topic.name)}
+                            className="bg-blue-600 text-white py-2 px-3 rounded-lg hover:bg-blue-700 transition"
+                          >
+                            <Edit className="w-4 h-4" />
+                          </button>
+                          <button
                             onClick={() => deleteTopic(subject.name, topic.name)}
                             className="bg-red-600 text-white py-2 px-3 rounded-lg hover:bg-red-700 transition"
                           >
@@ -261,7 +300,9 @@ export default function FlashcardBuilder() {
                 <ArrowLeft className="w-5 h-5" />
                 Back
               </button>
-              <h1 className="text-3xl font-bold text-gray-800">Build Your Stack</h1>
+              <h1 className="text-3xl font-bold text-gray-800">
+                {editingStack ? 'Edit Stack' : 'Build Your Stack'}
+              </h1>
               <div className="w-20"></div>
             </div>
 
