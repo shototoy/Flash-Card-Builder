@@ -1,0 +1,1225 @@
+{
+  "name": "COMPUTER ARCHITECTURE AND ORGANIZATION",
+  "topics": [
+    {
+      "name": "TOPIC 1: INTRODUCTION TO COMPUTER ARCHITECTURE AND ORGANIZATION",
+      "cards": [
+        {
+          "question": "Refers to those attributes of a system that are visible to the programmer or user and that directly affect the logical execution of a program.",
+          "answer": "Computer Architecture",
+          "type": "identification"
+        },
+        {
+          "question": "It defines the system in an abstract manner — essentially, what does the system do?",
+          "answer": "Computer Architecture",
+          "type": "identification"
+        },
+        {
+          "question": "This is the way in which these architectural features are implemented in hardware.",
+          "answer": "Computer Organization",
+          "type": "identification"
+        },
+        {
+          "question": "It answers the question: how does the system do it?",
+          "answer": "Computer Organization",
+          "type": "identification"
+        },
+        {
+          "question": "Serve as the elemental building blocks, orchestrating the entire spectrum of operations within a computer, and they determine the efficiency of the system.",
+          "answer": "BASIC INSTRUCTIONS",
+          "type": "identification"
+        },
+        {
+          "question": "also known as an ISA (Instruction Set Architecture) computer.",
+          "answer": "VON NEUMANN ARCHITECTURE",
+          "type": "identification"
+        },
+        {
+          "question": "Since instructions and data share the same bus, only one transfer can happen at a time. This limits speed.",
+          "answer": "VON NEUMANN BOTTLENECK",
+          "type": "identification"
+        },
+        {
+          "question": "developed to overcome the limitations of\tVon Neumann’s single-bus design. Have separate storage and separate buses for instruction and data.",
+          "answer": "HARVARD ARCHITECTURE",
+          "type": "identification"
+        },
+        {
+          "question": "Single memory and single bus, Simple but slower due to bottlenecks\t",
+          "answer": "Von Neumann Architecture",
+          "type": "identification"
+        },
+        {
+          "question": "Separate memories and buses, Faster but more complex.",
+          "answer": "Harvard Architecture",
+          "type": "identification"
+        },
+        {
+          "question": "TYPES OF COMPUTER",
+          "answer": "Fixed-Program Computers , Stored-Program Computers",
+          "type": "enumeration"
+        },
+        {
+          "question": "Eckert and Mauchly at the University of Pennsylvania in 1943–1946, Programmed manually by rewiring switches, Decimal, not Binary",
+          "answer": "ENIAC (ELECTRONIC NUMERICAL INTEGRATOR AND COMPUTER)",
+          "type": "identification"
+        },
+        {
+          "question": "Built at the Institute for Advanced Study (IAS), \tReferred to as Von Neumann Machine, ",
+          "answer": "IAS MODEL",
+          "type": "identification"
+        },
+        {
+          "question": "created in 1951 for the US Census Bureau by \tEckert-Mauchly Computer Corporation",
+          "answer": "UNIVAC I (Universal Automatic Computer)",
+          "type": "identification"
+        },
+        {
+          "question": "Uses Vacuum Tubes for circuitry and magnetic drums for storage",
+          "answer": "First Generation",
+          "type": "identification"
+        },
+        {
+          "question": "Transistors replace vacuum lubes",
+          "answer": "Second Generation",
+          "type": "identification"
+        },
+        {
+          "question": "Integrated Circuits replaced transistors",
+          "answer": "Third Generation",
+          "type": "identification"
+        },
+        {
+          "question": "Microprocessors placed CPU on a single Chip",
+          "answer": "Fourth Generation",
+          "type": "identification"
+        },
+        {
+          "question": "Focused on AI, parallel and distributing computing, mobile devices, cloud computing, and the internet",
+          "answer": "Fifth Generation",
+          "type": "identification"
+        },
+        {
+          "question": "FUNCTIONS OF A COMPUTER SYSTEM",
+          "answer": "Data Processing, Data Storage, Data Movement, Control",
+          "type": "enumeration"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 2: RELEVANT TOOLS, STANDARDS, AND/OR ENGINEERING CONSTRAINTS",
+      "cards": [
+        {
+          "question": "Test digital circuits before building them.",
+          "answer": "Simulation Tools",
+          "type": "identification"
+        },
+        {
+          "question": "An open-source digital logic simulator used for designing and simulating digital circuits.",
+          "answer": "Logisim",
+          "type": "identification"
+        },
+        {
+          "question": "An open-source modular platform for computer-system architecture research.",
+          "answer": "GEM5",
+          "type": "identification"
+        },
+        {
+          "question": "A specialized programming language used to describe, model, and simulate the behavior and structure of digital circuits and systems.",
+          "answer": "Hardware Description Language (HDL) Tool",
+          "type": "identification"
+        },
+        {
+          "question": "A hardware description language with C-like syntax, used to design and simulate digital circuits.",
+          "answer": "Verilog",
+          "type": "identification"
+        },
+        {
+          "question": "Translate human-readable code into machine code. Assemblers handle assembly machine code, while compilers handle high-level language assembly/machine code.",
+          "answer": "Assembler and Compiler Tools",
+          "type": "identification"
+        },
+        {
+          "question": "A free, open-source assembler for x86/x86-64 processors.",
+          "answer": "NASM (Netwide Assembler)",
+          "type": "identification"
+        },
+        {
+          "question": "Find and fix errors by stepping through code and inspecting program state.",
+          "answer": "Debuggers",
+          "type": "identification"
+        },
+        {
+          "question": "An open-source debugging tool for C, C++, and assembly.",
+          "answer": "GDB (GNU Debugger)",
+          "type": "identification"
+        },
+        {
+          "question": "Measure performance, detect bottlenecks, and optimize efficiency.",
+          "answer": "Profilers",
+          "type": "identification"
+        },
+        {
+          "question": "An open-source tool for debugging and profiling.",
+          "answer": "Valgrind",
+          "type": "identification"
+        },
+        {
+          "question": "Software for creating and simulating logic circuits. They help visualize and test digital components like gates, flip-flops, ALUs, and memory.",
+          "answer": "Digital Logic Design Tools",
+          "type": "identification"
+        },
+        {
+          "question": "A circuit simulation and PCB design software used for digital, analog, and microcontroller-based system design.",
+          "answer": "Proteus",
+          "type": "identification"
+        },
+        {
+          "question": "A software (or sometimes hardware) tool that imitates the behavior of another computer system or device.",
+          "answer": "Emulator",
+          "type": "identification"
+        },
+        {
+          "question": "An open-source emulator and virtualizer that can run programs made for one CPU architecture on another.",
+          "answer": "QEMU (Quick Emulator)",
+          "type": "identification"
+        },
+        {
+          "question": "Software that creates a virtualized environment on top of physical hardware.",
+          "answer": "Virtual Machine",
+          "type": "identification"
+        },
+        {
+          "question": "A native hypervisor built into Windows that allows you to create and manage Virtual Machines.",
+          "answer": "Microsoft Hyper-V",
+          "type": "identification"
+        },
+        {
+          "question": "The formal specification of the interface between a computer's hardware and software.",
+          "answer": "Instruction Set Architecture (ISA)",
+          "type": "identification"
+        },
+        {
+          "question": "What are the types of ISA?",
+          "answer": "Stack-based ISA, Accumulator-based ISA, General-Purpose Register (GPR) ISA, RISC (Reduced Instruction Set Computer)",
+          "type": "enumeration"
+        },
+        {
+          "question": "Instructions operate on the top of the stack and usually do not include operand addresses. Example: JVM (Java Virtual Machine), Burroughs B5000.",
+          "answer": "Stack-based ISA",
+          "type": "identification"
+        },
+        {
+          "question": "Instructions are shorter, but the accumulator becomes a bottleneck. Example: Early Intel 4004, PDP-8.",
+          "answer": "Accumulator-based ISA",
+          "type": "identification"
+        },
+        {
+          "question": "Uses multiple registers for storing operands. Example: x86 (register-memory), MIPS/RISC-V/ARM (load-store).",
+          "answer": "General-Purpose Register (GPR) ISA",
+          "type": "identification"
+        },
+        {
+          "question": "Simplified instruction set with few, fixed-length instructions. Example: MIPS, ARM, RISC-V.",
+          "answer": "RISC (Reduced Instruction Set Computer)",
+          "type": "identification"
+        },
+        {
+          "question": "A set of internationally recognized rules and guidelines developed by the Institute of Electrical and Electronics Engineers (IEEE). These standards ensure uniformity, compatibility, interoperability, and reliability in the design and operation of computer systems, electronics, communication networks, and software.",
+          "answer": "IEEE Standards",
+          "type": "identification"
+        },
+        {
+          "question": "What are the key IEEE Standards?",
+          "answer": "IEEE 754 – Floating-Point Arithmetic Standard, IEEE 802 – Networking Standards, Fixed-Point Arithmetic Standards, IEEE 1016 – Software Design Description, IEEE 1471 / ISO/IEC 42010 – Architecture Description, IEEE 1500 – Embedded Core Test Standard",
+          "type": "enumeration"
+        },
+        {
+          "question": "Defines how floating-point numbers are represented and computed in computers.",
+          "answer": "IEEE 754 – Floating-Point Arithmetic Standard",
+          "type": "identification"
+        },
+        {
+          "question": "A family of standards for LAN, MAN, and wireless networks.",
+          "answer": "IEEE 802 – Networking Standards",
+          "type": "identification"
+        },
+        {
+          "question": "Used in embedded systems and DSP, representing numbers with fixed bits for integer and fractional parts.",
+          "answer": "Fixed-Point Arithmetic Standards",
+          "type": "identification"
+        },
+        {
+          "question": "Provides a standard for documenting software architectures.",
+          "answer": "IEEE 1016 – Software Design Description",
+          "type": "identification"
+        },
+        {
+          "question": "Defines how to describe and document system architectures.",
+          "answer": "IEEE 1471 / ISO/IEC 42010 – Architecture Description",
+          "type": "identification"
+        },
+        {
+          "question": "Standard for testing embedded processors/cores in SoCs.",
+          "answer": "IEEE 1500 – Embedded Core Test Standard",
+          "type": "identification"
+        },
+        {
+          "question": "Specifications that define how operating systems manage hardware resources and interact with virtual environments.",
+          "answer": "Operating System and Virtualization Standards",
+          "type": "identification"
+        },
+        {
+          "question": "Formally defined specifications that regulate the design, organization, performance, compatibility, and functionality of memory technologies. These standards are created by industry consortia (such as JEDEC, IEEE, ISO) to ensure that memory modules and systems from different vendors can interoperate and meet performance, reliability, and power efficiency requirements.",
+          "answer": "Memory Standards",
+          "type": "identification"
+        },
+        {
+          "question": "What is the purpose of Memory Standards?",
+          "answer": "Interoperability, Scalability, Performance Optimization, Power Efficiency, Reliability",
+          "type": "enumeration"
+        },
+        {
+          "question": "Ensures memory from different manufacturers works with processors and motherboards.",
+          "answer": "Interoperability",
+          "type": "identification"
+        },
+        {
+          "question": "Supports evolution across generations (DDR3 → DDR4 → DDR5).",
+          "answer": "Scalability",
+          "type": "identification"
+        },
+        {
+          "question": "Defines speed (frequency, bandwidth) and latency.",
+          "answer": "Performance Optimization",
+          "type": "identification"
+        },
+        {
+          "question": "Sets voltage requirements to reduce energy consumption.",
+          "answer": "Power Efficiency",
+          "type": "identification"
+        },
+        {
+          "question": "Defines error detection/correction (ECC) mechanisms.",
+          "answer": "Reliability",
+          "type": "identification"
+        },
+        {
+          "question": "What are the types of Memory in Computer Architecture?",
+          "answer": "Primary Memory (Volatile), Secondary Memory (Non-Volatile), Hybrid / Emerging Memory",
+          "type": "enumeration"
+        },
+        {
+          "question": "What are the types of Primary Memory (Volatile)?",
+          "answer": "Registers (inside CPU), Cache Memory, Main Memory (RAM)",
+          "type": "enumeration"
+        },
+        {
+          "question": "Proprietary design, ISA-specific.",
+          "answer": "Registers (inside CPU)",
+          "type": "identification"
+        },
+        {
+          "question": "Defined by CPU vendors, but follows coherence protocols (e.g., MESI standard).",
+          "answer": "Cache Memory",
+          "type": "identification"
+        },
+        {
+          "question": "Governed by JEDEC DDR, LPDDR standards.",
+          "answer": "Main Memory (RAM)",
+          "type": "identification"
+        },
+        {
+          "question": "What are the types of Secondary Memory (Non-Volatile)?",
+          "answer": "Flash memory/SSDs, Magnetic Disks",
+          "type": "enumeration"
+        },
+        {
+          "question": "Governed by standards like NVMe, UFS, eMMC.",
+          "answer": "Flash memory/SSDs",
+          "type": "identification"
+        },
+        {
+          "question": "Governed by ATA/SATA standards.",
+          "answer": "Magnetic Disks",
+          "type": "identification"
+        },
+        {
+          "question": "A type of Hybrid / Emerging Memory. Example: Intel Optane (3D XPoint), NVDIMM standards.",
+          "answer": "Storage-Class Memory (SCM)",
+          "type": "identification"
+        },
+        {
+          "question": "Designing energy-efficient processors and systems is a significant constraint.",
+          "answer": "Power Consumption",
+          "type": "identification"
+        },
+        {
+          "question": "Engineers must work within budget constraints when designing systems.",
+          "answer": "Cost Constraints",
+          "type": "identification"
+        },
+        {
+          "question": "Meeting performance targets such as clock speed, throughput, and latency.",
+          "answer": "Performance Requirements",
+          "type": "identification"
+        },
+        {
+          "question": "Maintaining safe operating temperatures to prevent overheating and system failure.",
+          "answer": "Thermal Constraints",
+          "type": "identification"
+        },
+        {
+          "question": "Ensuring new hardware designs are compatible with existing software and peripherals.",
+          "answer": "Compatibility and Interoperability",
+          "type": "identification"
+        },
+        {
+          "question": "Engineers must adhere to standards related to data security and privacy.",
+          "answer": "Regulatory Compliance",
+          "type": "identification"
+        },
+        {
+          "question": "Systems should be designed to accommodate future upgrades and expansions.",
+          "answer": "Scalability",
+          "type": "identification"
+        },
+        {
+          "question": "Ensuring systems are reliable and can tolerate hardware failures.",
+          "answer": "Reliability and Fault Tolerance",
+          "type": "identification"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 3: INSTRUCTION SET ARCHITECTURE",
+      "cards": [
+        {
+          "question": "Part of the abstract model of a computer that defines how the CPU is controlled by the software. It acts as an interface between the hardware and the software.",
+          "answer": "Instruction Set Architecture (ISA)",
+          "type": "identification"
+        },
+        {
+          "question": "What are the classifications of instructions?",
+          "answer": "Data Movement instructions, Transfer of Control instructions, Arithmetic Logical instructions, Input/Output instructions, Miscellaneous instructions",
+          "type": "enumeration"
+        },
+        {
+          "question": "Allow the processor to move data between registers and between memory and registers.",
+          "answer": "Data Movement instructions",
+          "type": "identification"
+        },
+        {
+          "question": "Concerned with branching for loops and conditional control structures as well as for handling subprograms.",
+          "answer": "Transfer of Control instructions",
+          "type": "identification"
+        },
+        {
+          "question": "Carry out the usual arithmetic and logical operations.",
+          "answer": "Arithmetic Logical instructions",
+          "type": "identification"
+        },
+        {
+          "question": "Used for carrying out I/O.",
+          "answer": "Input/Output instructions",
+          "type": "identification"
+        },
+        {
+          "question": "Instructions for handling interrupts and such activities.",
+          "answer": "Miscellaneous instructions",
+          "type": "identification"
+        },
+        {
+          "question": "Does nothing; used for timing adjustments or delays.",
+          "answer": "NOP (No Operation)",
+          "type": "identification"
+        },
+        {
+          "question": "Stops the CPU until the next interrupt or reset.",
+          "answer": "HLT (Halt)",
+          "type": "identification"
+        },
+        {
+          "question": "Clear or Set the Interrupt Flag (controls whether interrupts are allowed).",
+          "answer": "CLI / STI",
+          "type": "identification"
+        },
+        {
+          "question": "An assembly instruction used to generate a software interrupt.",
+          "answer": "INT (Interrupt)",
+          "type": "identification"
+        },
+        {
+          "question": "The way to make hardware simpler. Designed to follow simple instructions.",
+          "answer": "RISC (Reduced Instruction Set Computer)",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of RISC architectures?",
+          "answer": "ARM, PowerPC, SPARC",
+          "type": "enumeration"
+        },
+        {
+          "question": "The single instruction that handles multiple work. Used to execute complex tasks with just a single command.",
+          "answer": "CISC (Complex Instruction Set Computer)",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of CISC architectures?",
+          "answer": "x86, x64, Motorola 68000",
+          "type": "enumeration"
+        },
+        {
+          "question": "The cycle that starts when the computer is turned on and keeps repeating until the computer is shut down. First introduced by John Von Neumann.",
+          "answer": "Fetch-Execute Cycle (Fetch-Decode-Execute Cycle)",
+          "type": "identification"
+        },
+        {
+          "question": "What are the stages of the Fetch-Execute Cycle?",
+          "answer": "Fetch, Decode, Execute",
+          "type": "enumeration"
+        },
+        {
+          "question": "The computer fetches an instruction from the main memory (RAM) to the CPU. The computer retrieves the instruction from main memory and stores it in the registers.",
+          "answer": "Fetch",
+          "type": "identification"
+        },
+        {
+          "question": "The instruction stored in the CIR is decoded by the Control Unit (CU) of the CPU. The CPU interprets the instruction and figures out what action to take.",
+          "answer": "Decode",
+          "type": "identification"
+        },
+        {
+          "question": "The CPU performs the actual operation specified by the decoded instruction. The CPU performs the action that's required, such as performing calculation.",
+          "answer": "Execute",
+          "type": "identification"
+        },
+        {
+          "question": "The storage space in a computer where data to be processed and instructions to be followed are stored. It plays an essential role in the stages of the fetch execute cycle.",
+          "answer": "Memory",
+          "type": "identification"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 4: MEASURING PERFORMANCE",
+      "cards": [
+        {
+          "question": "Measures how efficiently a system executes tasks and delivers results. It is not just about speed, but also about responsiveness, resource usage, and scalability.",
+          "answer": "Computer Performance",
+          "type": "identification"
+        },
+        {
+          "question": "Why do we measure performance?",
+          "answer": "Comparison, Optimization, Cost Efficiency, Reliability",
+          "type": "enumeration"
+        },
+        {
+          "question": "Helps decide which system or processor is better for a given workload.",
+          "answer": "Comparison",
+          "type": "identification"
+        },
+        {
+          "question": "Identifies bottlenecks (CPU, memory, I/O) that slow performance.",
+          "answer": "Optimization",
+          "type": "identification"
+        },
+        {
+          "question": "Balances performance with power consumption and system cost.",
+          "answer": "Cost Efficiency",
+          "type": "identification"
+        },
+        {
+          "question": "Ensures systems can handle workloads without failure or slowdown.",
+          "answer": "Reliability",
+          "type": "identification"
+        },
+        {
+          "question": "What are the two perspectives of performance?",
+          "answer": "Response Time (Execution Time), Throughput",
+          "type": "enumeration"
+        },
+        {
+          "question": "How long it takes to complete a single job.",
+          "answer": "Response Time (Execution Time)",
+          "type": "identification"
+        },
+        {
+          "question": "How many jobs can be done in a given time frame.",
+          "answer": "Throughput",
+          "type": "identification"
+        },
+        {
+          "question": "What are the ways to measure the performance of a Computer?",
+          "answer": "Execution Time, CPU time, Clock Speed, Throughput, Latency, FPS (Frames Per Second), Bandwidth, MIPS (Million Instructions Per Second), FLOPS (Floating Point Operations Per Second)",
+          "type": "enumeration"
+        },
+        {
+          "question": "Total time from start to completion of a task. Measured in seconds.",
+          "answer": "Execution Time",
+          "type": "identification"
+        },
+        {
+          "question": "Time CPU spends actively executing instructions. Measured in seconds.",
+          "answer": "CPU time",
+          "type": "identification"
+        },
+        {
+          "question": "Number of cycles executed by the CPU per second. Measured in Hz.",
+          "answer": "Clock Speed",
+          "type": "identification"
+        },
+        {
+          "question": "Total amount of work done per unit time. Measured in I/S.",
+          "answer": "Throughput",
+          "type": "identification"
+        },
+        {
+          "question": "Delay for a single operation. Measured in seconds.",
+          "answer": "Latency",
+          "type": "identification"
+        },
+        {
+          "question": "Measures how many frames the GPU can render per second.",
+          "answer": "FPS (Frames Per Second)",
+          "type": "identification"
+        },
+        {
+          "question": "Maximum data transfer rate of a system or component. Measured in Bytes/s.",
+          "answer": "Bandwidth",
+          "type": "identification"
+        },
+        {
+          "question": "Measure of instruction execution speed.",
+          "answer": "MIPS (Million Instructions Per Second)",
+          "type": "identification"
+        },
+        {
+          "question": "Measure of floating-point computation speed, used in scientific workloads.",
+          "answer": "FLOPS (Floating Point Operations Per Second)",
+          "type": "identification"
+        },
+        {
+          "question": "What are practical ways to measure Computer performance?",
+          "answer": "Performance Monitor, Windows Security, Benchmarking",
+          "type": "enumeration"
+        },
+        {
+          "question": "Built-in tool to track CPU usage, memory, disk, and network activity in real-time.",
+          "answer": "Performance Monitor",
+          "type": "identification"
+        },
+        {
+          "question": "Monitors system health, performance, and security status, including resource usage.",
+          "answer": "Windows Security",
+          "type": "identification"
+        },
+        {
+          "question": "Running standardized tests/programs to compare real-world performance across systems.",
+          "answer": "Benchmarking",
+          "type": "identification"
+        },
+        {
+          "question": "What are the ways to improve performance of a Computer?",
+          "answer": "Software improvements, Hardware improvements, Pro Level improvements",
+          "type": "enumeration"
+        },
+        {
+          "question": "What are software improvements for computer performance?",
+          "answer": "Close unnecessary program, Disable startup apps, Clear cache & junk files, Adjust power settings",
+          "type": "enumeration"
+        },
+        {
+          "question": "What are hardware improvements for computer performance?",
+          "answer": "Upgrade RAM, Upgrade SSD, Upgrade GPU, Cooling System, Upgrade CPU",
+          "type": "enumeration"
+        },
+        {
+          "question": "Load faster and multitasking.",
+          "answer": "Upgrade RAM",
+          "type": "identification"
+        },
+        {
+          "question": "Quickly can access data.",
+          "answer": "Upgrade SSD",
+          "type": "identification"
+        },
+        {
+          "question": "To handle higher frame rates and higher resolution.",
+          "answer": "Upgrade GPU",
+          "type": "identification"
+        },
+        {
+          "question": "Lower temperature means more stable.",
+          "answer": "Cooling System",
+          "type": "identification"
+        },
+        {
+          "question": "Overall improvement.",
+          "answer": "Upgrade CPU",
+          "type": "identification"
+        },
+        {
+          "question": "What are Pro Level improvements for computer performance?",
+          "answer": "Overclocking, Multithreading, Undervolting",
+          "type": "enumeration"
+        }
+      ]
+    },
+     {
+      "name": "TOPIC 5: COMPUTER ARITHMETIC",
+      "cards": [
+        {
+          "question": "It is the scientific field that deals with representation of numbers on computers and corresponding implementations of the arithmetic operations.",
+          "answer": "COMPUTER ARITHMETIC",
+          "type": "identification"
+        },
+        {
+          "question": "It is a method of representing fractional (non-integer) numbers by storing a fixed number of digits of their fractional part. ",
+          "answer": "Fixed-point arithmetic",
+          "type": "identification"
+        },
+        {
+          "question": "It is arithmetic on subsets of real numbers formed by a significand (a signed sequence of a fixed number of digits in some base) multiplied by an integer power of that base.",
+          "answer": "Floating-point arithmetic",
+          "type": "identification"
+        },
+        {
+          "question": "It is a mathematical technique used to mitigate rounding and measurement errors in mathematical computation by computing function bounds.",
+          "answer": "Interval arithmetic",
+          "type": "identification"
+        },
+        {
+          "question": "It is a binary operation that produces a matrix from two matrices.  For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix.\n\n",
+          "answer": "Matrix arithmetic",
+          "type": "identification"
+        },
+        {
+          "question": "It is an elementary branch of mathematics that deals with numerical operations like addition, subtraction, multiplication, and division. In a wider sense, it also includes exponentiation, extraction of roots, and taking logarithms.\n",
+          "answer": "Arithmetic",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\n0 and 1",
+          "answer": "System Digits",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\nA single binary digit",
+          "answer": "Bit (short for binary digit)",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\nThe rightmost bit",
+          "answer": "LSB (least significant bit)",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\nthe leftmost bit",
+          "answer": "MSB (most significant bit)",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\nThe right-hand byte of a pair",
+          "answer": "Upper Byte (or nybble)",
+          "type": "identification"
+        },
+        {
+          "question": "Binary Number System\nThe left-hand byte of a pair",
+          "answer": "Lower Byte (or nybble)",
+          "type": "identification"
+        },
+        {
+          "question": "The term ______ is used for 4 bits being subset of byte",
+          "answer": "nibble ",
+          "type": "identification"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 6: PROCESSOR ORGANIZATION",
+      "cards": [
+        {
+          "question": "It refers to the internal structure and functional arrangement of the central processing unit (CPU). ",
+          "answer": "Processor Organization ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a crucial component of the processor responsible for performing mathematical calculations and logical operations. \n•\tThe \"calculator\" of the CPU.",
+          "answer": "Arithmetic Logic Unit (ALU)",
+          "type": "identification"
+        },
+        {
+          "question": "It is the component of the processor that manages and coordinates all the activities within the CPU. It acts as the “director” of operations by fetching instructions from memory, decoding them, and sending control signals to the Arithmetic Logic Unit (ALU), registers, and other components to carry out the required tasks.\n•\tThe \"brain\" inside the CPU.\n",
+          "answer": "The Control Unit (CU)",
+          "type": "identification"
+        },
+        {
+          "question": "______ are small, high-speed storage units located inside the CPU that temporarily hold data, instructions, and addresses during processing. Unlike main memory, registers can be accessed almost instantly by the processor, making them essential for fast execution of instructions.",
+          "answer": "Registers",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of registers that stores intermediate results.",
+          "answer": " Accumulator (ACC) ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of Registers that tracks the next instruction.",
+          "answer": "Program Counter (PC) ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of Registers that holds the current instruction.",
+          "answer": "Instruction Register (IR) ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of Registers that temporary storage.",
+          "answer": "General Purpose Registers ",
+          "type": "identification"
+        },
+        {
+          "question": "____________ are the communication pathways that connect the different components of a computer system, allowing them to transfer data and coordinate operations. ",
+          "answer": "System buses",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of System buses that transfers actual data.",
+          "answer": "Data Bus ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of System buses that carries memory addresses.",
+          "answer": "Address Bus ",
+          "type": "identification"
+        },
+        {
+          "question": "It is a type of System buses that manages control signals.",
+          "answer": "Control Bus ",
+          "type": "identification"
+        },
+        {
+          "question": "It is the fundamental process by which a computer executes a program, consisting of a series of steps that the CPU repeatedly performs.",
+          "answer": "Instruction cycle ",
+          "type": "identification"
+        },
+        {
+          "question": "Instruction is retrieved from memory.",
+          "answer": "Fetch",
+          "type": "identification"
+        },
+        {
+          "question": "Instruction is interpreted by the CU.",
+          "answer": "Decode ",
+          "type": "identification"
+        },
+        {
+          "question": "ALU and registers perform the task.",
+          "answer": "Execute ",
+          "type": "identification"
+        },
+        {
+          "question": "Result is saved to memory/register. This cycle repeats millions of times per second.\n",
+          "answer": "Store ",
+          "type": "identification"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 7: MEMORY SYSTEM ORGANIZATION AND ARCHITECTURE",
+      "cards": [
+        {
+          "question": "Involves a memory hierarchy where different levels of memory (registers, cache, main memory, and auxiliary/secondary storage) balance speed, cost, and capacity.",
+          "answer": "Memory System Organization",
+          "type": "identification"
+        },
+        {
+          "question": "What are the four levels of the Memory Hierarchy from fastest to slowest?",
+          "answer": "CPU Registers, Cache Memory, Main Memory (RAM), Auxiliary/Secondary Storage",
+          "type": "enumeration"
+        },
+        {
+          "question": "Fastest and smallest memory, located within the CPU itself for immediate use.",
+          "answer": "CPU Registers",
+          "type": "identification"
+        },
+        {
+          "question": "A small, fast memory between the CPU and main memory, holding frequently accessed data and instructions for quick retrieval.",
+          "answer": "Cache Memory",
+          "type": "identification"
+        },
+        {
+          "question": "Volatile memory that stores active programs and data currently in use. It's slower and more expensive per bit than auxiliary memory but faster than secondary storage.",
+          "answer": "Main Memory (RAM)",
+          "type": "identification"
+        },
+        {
+          "question": "Large, non-volatile storage devices like hard drives and SSDs, used for permanent storage of programs and data that are not actively in use. It has the largest capacity but the slowest access times.",
+          "answer": "Auxiliary/Secondary Storage",
+          "type": "identification"
+        },
+        {
+          "question": "What are the two main types of Main Memory?",
+          "answer": "Static RAM (SRAM), Dynamic RAM (DRAM)",
+          "type": "enumeration"
+        },
+        {
+          "question": "Stores the binary information in flip flops and information remains valid until power is supplied. It has a faster access time and is used in implementing cache memory.",
+          "answer": "Static RAM (SRAM)",
+          "type": "identification"
+        },
+        {
+          "question": "Stores the binary information as a charge on the capacitor. It requires refreshing circuitry to maintain the charge on the capacitors after a few milliseconds. It contains more memory cells per unit area as compared to SRAM.",
+          "answer": "Dynamic RAM (DRAM)",
+          "type": "identification"
+        },
+        {
+          "question": "What are the additional storage device types in the memory hierarchy?",
+          "answer": "Magnetic Disk, Optical Disk, Magnetic Tape",
+          "type": "enumeration"
+        },
+        {
+          "question": "A storage device that uses a magnetization process to read, write, rewrite, and access data.",
+          "answer": "Magnetic Disk",
+          "type": "identification"
+        },
+        {
+          "question": "Any computer disk that uses optical storage techniques and technology to read and write data.",
+          "answer": "Optical Disk",
+          "type": "identification"
+        },
+        {
+          "question": "Simply a magnetic recording device that is covered with a plastic film. It is generally used for the backup of data.",
+          "answer": "Magnetic Tape",
+          "type": "identification"
+        },
+        {
+          "question": "What are the four key characteristics of Memory Hierarchy?",
+          "answer": "Capacity, Access Time, Performance, Cost Per Bit",
+          "type": "enumeration"
+        },
+        {
+          "question": "The global volume of information the memory can store. As we move top to bottom in the hierarchy, this increases.",
+          "answer": "Capacity",
+          "type": "identification"
+        },
+        {
+          "question": "The time interval between the read/write request and the availability of the data. As we move from top to bottom in the hierarchy, this increases.",
+          "answer": "Access Time",
+          "type": "identification"
+        },
+        {
+          "question": "The speed gap increased between the CPU registers and Main Memory due to a large difference in access time.",
+          "answer": "Performance",
+          "type": "identification"
+        },
+        {
+          "question": "As we move from bottom to top in the hierarchy, this increases, meaning internal memory is costlier than external memory.",
+          "answer": "Cost Per Bit",
+          "type": "identification"
+        },
+        {
+          "question": "What are the four types of ROM?",
+          "answer": "ROM, PROM, EPROM, EEPROM",
+          "type": "enumeration"
+        },
+        {
+          "question": "Permanent, non-volatile read-only memory.",
+          "answer": "ROM (Read-Only Memory)",
+          "type": "identification"
+        },
+        {
+          "question": "Programmable read-only memory that can be programmed once.",
+          "answer": "PROM (Programmable Read-Only Memory)",
+          "type": "identification"
+        },
+        {
+          "question": "Erasable Programmable Read-Only Memory that can be erased with UV light.",
+          "answer": "EPROM (Erasable Programmable Read-Only Memory)",
+          "type": "identification"
+        },
+        {
+          "question": "Electrically Erasable Programmable Read-Only Memory that supports electrically erasable, byte-level updates.",
+          "answer": "EEPROM (Electrically Erasable Programmable Read-Only Memory)",
+          "type": "identification"
+        },
+        {
+          "question": "What happens to capacity as you move from top to bottom in the memory hierarchy?",
+          "answer": "Capacity increases",
+          "type": "identification"
+        },
+        {
+          "question": "What happens to access time as you move from top to bottom in the memory hierarchy?",
+          "answer": "Access time increases (becomes slower)",
+          "type": "identification"
+        },
+        {
+          "question": "What happens to cost per bit as you move from top to bottom in the memory hierarchy?",
+          "answer": "Cost per bit decreases (becomes cheaper)",
+          "type": "identification"
+        },
+        {
+          "question": "Which type of RAM requires refreshing circuitry?",
+          "answer": "Dynamic RAM (DRAM)",
+          "type": "identification"
+        },
+        {
+          "question": "Which type of RAM uses flip flops to store information?",
+          "answer": "Static RAM (SRAM)",
+          "type": "identification"
+        },
+        {
+          "question": "Which memory level is volatile and stores active programs and data currently in use?",
+          "answer": "Main Memory (RAM)",
+          "type": "identification"
+        },
+        {
+          "question": "Which memory level provides permanent storage with the largest capacity but slowest access times?",
+          "answer": "Auxiliary/Secondary Storage",
+          "type": "identification"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 8: INPUT/OUTPUT INTERFACE",
+      "cards": [
+        {
+          "question": "Internal storage and External I/O Devices cannot communicate directly due to major differences.",
+          "answer": "Input/Output Interface",
+          "type": "identification"
+        },
+        {
+          "question": "What are the major differences between Internal storage and External I/O Devices?",
+          "answer": "Different manner of operation, Data transfer rate, Difference in word format, Difference in operating modes of peripherals",
+          "type": "enumeration"
+        },
+        {
+          "question": "What are the four types of I/O Command?",
+          "answer": "Control Command, Status Command, Output Data Command, Input Data Command",
+          "type": "enumeration"
+        },
+        {
+          "question": "Contains Data, Address & Control Lines, similar to Memory Bus.",
+          "answer": "I/O Bus",
+          "type": "identification"
+        },
+        {
+          "question": "What are the three ways to communicate between I/O and Memory Bus?",
+          "answer": "Use two separate buses, Use one common bus but separate control lines, Use common bus with common control lines",
+          "type": "enumeration"
+        }
+      ]
+    },
+    {
+      "name": "TOPIC 9: PERIPHERAL SUBSYSTEMS",
+      "cards": [
+        {
+          "question": "Play a vital role in computer architecture as they extend the functionality of the central processing unit (CPU). They provide the necessary means for interaction, handling input, output, storage, and communication tasks that make computing practical and meaningful for users.",
+          "answer": "Peripheral Subsystems",
+          "type": "identification"
+        },
+        {
+          "question": "Any external device connected to a computer that adds functionality but is not part of the core computer system. These devices typically handle input, output, or both, and are also known as input-output (I/O) devices.",
+          "answer": "Peripheral Device",
+          "type": "identification"
+        },
+        {
+          "question": "What are the four basic categories of Peripheral Devices?",
+          "answer": "Input Devices, Output Devices, Storage Devices, Communication Devices",
+          "type": "enumeration"
+        },
+        {
+          "question": "A device that converts incoming data and instructions into a pattern of electrical signals in binary code that are comprehensible to a digital computer.",
+          "answer": "Input Devices",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of Input Devices?",
+          "answer": "Keyboard, Mouse, Scanner, Microphone",
+          "type": "enumeration"
+        },
+        {
+          "question": "An input device that allows users to enter text and commands into a computer system.",
+          "answer": "Keyboard",
+          "type": "identification"
+        },
+        {
+          "question": "An input device that allows users to control the cursor on a computer screen.",
+          "answer": "Mouse",
+          "type": "identification"
+        },
+        {
+          "question": "An input device that allows users to convert physical documents and images into digital files.",
+          "answer": "Scanner",
+          "type": "identification"
+        },
+        {
+          "question": "An input device that allows users to record audio.",
+          "answer": "Microphone",
+          "type": "identification"
+        },
+        {
+          "question": "Generally the reverse of the input process and generally translates the digitized signals into a form intelligible to the user. Also performed for sending data from one computer system to another.",
+          "answer": "Output Devices",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of Output Devices?",
+          "answer": "Monitor, Printer, Speaker",
+          "type": "enumeration"
+        },
+        {
+          "question": "An output device that displays visual information from a computer system.",
+          "answer": "Monitor",
+          "type": "identification"
+        },
+        {
+          "question": "An output device that produces physical copies of documents or images.",
+          "answer": "Printer",
+          "type": "identification"
+        },
+        {
+          "question": "An output device that produces audio.",
+          "answer": "Speaker",
+          "type": "identification"
+        },
+        {
+          "question": "Used to store data in the system which is required for performing any operation in the system. Provides better compatibility.",
+          "answer": "Storage Devices",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of Storage Devices?",
+          "answer": "Hard Drive, USB Drive, Memory Card, External Hard Drive",
+          "type": "enumeration"
+        },
+        {
+          "question": "A storage device that stores data and files on a computer system.",
+          "answer": "Hard Drive",
+          "type": "identification"
+        },
+        {
+          "question": "A small, portable storage device that connects to a computer system to provide additional storage space.",
+          "answer": "USB Drive",
+          "type": "identification"
+        },
+        {
+          "question": "A small, portable storage device that is commonly used in digital cameras and smartphones.",
+          "answer": "Memory Card",
+          "type": "identification"
+        },
+        {
+          "question": "A storage device that connects to a computer system to provide additional storage space.",
+          "answer": "External Hard Drive",
+          "type": "identification"
+        },
+        {
+          "question": "Hardware devices that enables data exchange between computer systems or networks.",
+          "answer": "Communication Devices",
+          "type": "identification"
+        },
+        {
+          "question": "What are examples of Communication Devices?",
+          "answer": "Modem, Network Card, Router",
+          "type": "enumeration"
+        },
+        {
+          "question": "A communication device that allows a computer system to connect to the internet.",
+          "answer": "Modem",
+          "type": "identification"
+        },
+        {
+          "question": "A communication device that allows a computer system to connect to a network.",
+          "answer": "Network Card",
+          "type": "identification"
+        },
+        {
+          "question": "A communication device that allows multiple devices to connect to a network.",
+          "answer": "Router",
+          "type": "identification"
+        },
+        {
+          "question": "What is the importance of Peripheral Devices?",
+          "answer": "Enhanced Functionality, User Interaction, Data Output, Data Storage, Communication, Increased Efficiency",
+          "type": "enumeration"
+        },
+        {
+          "question": "Peripheral devices expand a computer's capabilities, enabling it to perform various tasks.",
+          "answer": "Enhanced Functionality",
+          "type": "identification"
+        },
+        {
+          "question": "Input devices like keyboards and mice allow users to control and interact with the system.",
+          "answer": "User Interaction",
+          "type": "identification"
+        },
+        {
+          "question": "Output devices such as monitors and printers display or present processed data.",
+          "answer": "Data Output",
+          "type": "identification"
+        },
+        {
+          "question": "Storage devices ensure important data is saved and can be accessed or backed up when needed.",
+          "answer": "Data Storage",
+          "type": "identification"
+        },
+        {
+          "question": "Communication devices enable network connectivity, allowing the computer to communicate with other systems or networks.",
+          "answer": "Communication",
+          "type": "identification"
+        },
+        {
+          "question": "Peripherals improve the overall efficiency and usability of the computer by adding specialized functions.",
+          "answer": "Increased Efficiency",
+          "type": "identification"
+        },
+        {
+          "question": "What are the Peripheral Devices Connecting Options?",
+          "answer": "USB, Bluetooth, Wi-Fi, HDMI, Ethernet, Thunderbolt, VGA, DisplayPort",
+          "type": "enumeration"
+        },
+        {
+          "question": "Common for keyboards, mice, printers, and external storage devices; supports both wired and wireless connections.",
+          "answer": "USB",
+          "type": "identification"
+        },
+        {
+          "question": "Wireless connection for devices like headphones, speakers, and mice.",
+          "answer": "Bluetooth",
+          "type": "identification"
+        },
+        {
+          "question": "Used for wireless networked devices like printers and cameras.",
+          "answer": "Wi-Fi",
+          "type": "identification"
+        },
+        {
+          "question": "High-Definition Multimedia Interface that connects monitors, projectors, and TVs for high-definition video and audio.",
+          "answer": "HDMI",
+          "type": "identification"
+        },
+        {
+          "question": "Wired connection for network communication, often for internet or LAN access.",
+          "answer": "Ethernet",
+          "type": "identification"
+        },
+        {
+          "question": "High-speed connection for external devices like storage drives and monitors.",
+          "answer": "Thunderbolt",
+          "type": "identification"
+        },
+        {
+          "question": "Video Graphics Array, an older connection for monitors or projectors, supports lower video resolutions.",
+          "answer": "VGA",
+          "type": "identification"
+        },
+        {
+          "question": "Similar to HDMI, used for connecting high-definition monitors.",
+          "answer": "DisplayPort",
+          "type": "identification"
+        }
+      ]
+    }
+  ]
+}
