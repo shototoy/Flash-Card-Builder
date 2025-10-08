@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Flash-Card-Builder/static/css/main.e6c13ad2.css",
+    "main.js": "/Flash-Card-Builder/static/js/main.4201e0a0.js",
+    "index.html": "/Flash-Card-Builder/index.html",
+    "main.e6c13ad2.css.map": "/Flash-Card-Builder/static/css/main.e6c13ad2.css.map",
+    "main.4201e0a0.js.map": "/Flash-Card-Builder/static/js/main.4201e0a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4201e0a0.js"
+  ]
+}
