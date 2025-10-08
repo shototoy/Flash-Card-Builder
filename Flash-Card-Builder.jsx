@@ -232,22 +232,21 @@ export default function FlashcardBuilder() {
 
   if (screen === 'start') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-4">
+        <div className="bg-white rounded-xl shadow-xl p-8 max-w-md w-full">
           <div className="text-center mb-8">
             <BookOpen className="w-16 h-16 mx-auto text-indigo-600 mb-4" />
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">Flashcard Builder</h1>
-            <p className="text-gray-600">Create and study your flashcards</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Flashcard Builder</h1>
+            <p className="text-gray-600 mb-4">Create and study your flashcards</p>
+            <p className="text-sm text-gray-500">by Jule Cyrus Fernandez</p>
           </div>
           
-          <div className="space-y-4">
-            <button
-              onClick={() => setScreen('dashboard')}
-              className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition"
-            >
-              Start
-            </button>
-          </div>
+          <button
+            onClick={() => setScreen('dashboard')}
+            className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 font-medium transition"
+          >
+            Start
+          </button>
         </div>
       </div>
     );
@@ -255,15 +254,15 @@ export default function FlashcardBuilder() {
 
   if (screen === 'dashboard') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 p-6">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
             <div className="flex justify-between items-center">
-              <h1 className="text-3xl font-bold text-gray-800">Subjects</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Subjects</h1>
               <div className="flex gap-3">
-                <label className="flex items-center gap-2 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 cursor-pointer transition">
+                <label className="flex items-center gap-2 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 cursor-pointer font-medium transition">
                   <Upload className="w-5 h-5" />
-                  Import Subject
+                  Import
                   <input
                     type="file"
                     accept=".json"
@@ -273,7 +272,7 @@ export default function FlashcardBuilder() {
                 </label>
                 <button
                   onClick={() => setScreen('builder')}
-                  className="flex items-center gap-2 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
+                  className="flex items-center gap-2 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 font-medium transition"
                 >
                   <Plus className="w-5 h-5" />
                   New Topic
@@ -283,39 +282,37 @@ export default function FlashcardBuilder() {
           </div>
 
           {subjects.length === 0 ? (
-            <div className="bg-white rounded-2xl shadow-xl p-12 text-center">
+            <div className="bg-white rounded-xl shadow-lg p-12 text-center">
               <BookOpen className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-              <p className="text-gray-600 text-lg">No subjects yet. Create your first topic!</p>
+              <p className="text-gray-600">No subjects yet. Create your first topic!</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {subjects.map((subject, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <FolderOpen className="w-8 h-8 text-indigo-600" />
-                      <h2 className="text-2xl font-bold text-gray-800">{subject.name}</h2>
-                    </div>
+                <div key={idx} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+                  <div className="flex items-center gap-3 mb-4">
+                    <FolderOpen className="w-8 h-8 text-indigo-600" />
+                    <h2 className="text-xl font-bold text-gray-900">{subject.name}</h2>
                   </div>
                   <p className="text-gray-600 mb-4">{subject.topics.length} topics</p>
                   <div className="flex gap-2">
                     <button
                       onClick={() => viewSubject(subject)}
-                      className="flex-1 bg-indigo-600 text-white py-2 px-3 rounded-lg hover:bg-indigo-700 transition text-sm"
+                      className="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 font-medium transition"
                     >
                       Open
                     </button>
                     <button
                       onClick={() => handleExportSubject(subject)}
-                      className="bg-green-600 text-white py-2 px-3 rounded-lg hover:bg-green-700 transition"
+                      className="bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 transition"
                     >
-                      <Download className="w-4 h-4" />
+                      <Download className="w-5 h-5" />
                     </button>
                     <button
                       onClick={() => deleteSubject(subject.name)}
-                      className="bg-red-600 text-white py-2 px-3 rounded-lg hover:bg-red-700 transition"
+                      className="bg-red-600 text-white p-2 rounded-lg hover:bg-red-700 transition"
                     >
-                      <Trash2 className="w-4 h-4" />
+                      <Trash2 className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
@@ -329,23 +326,23 @@ export default function FlashcardBuilder() {
 
   if (screen === 'subjectView') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 p-6">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setScreen('dashboard')}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-600 hover:text-gray-900"
                 >
                   <ArrowLeft className="w-6 h-6" />
                 </button>
-                <h1 className="text-3xl font-bold text-gray-800">{selectedSubject.name}</h1>
+                <h1 className="text-3xl font-bold text-gray-900">{selectedSubject.name}</h1>
               </div>
               <div className="flex gap-3">
-                <label className="flex items-center gap-2 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 cursor-pointer transition">
+                <label className="flex items-center gap-2 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 cursor-pointer font-medium transition">
                   <Upload className="w-5 h-5" />
-                  Import Topic
+                  Import
                   <input
                     type="file"
                     accept=".json"
@@ -358,7 +355,7 @@ export default function FlashcardBuilder() {
                     setCurrentSubject(selectedSubject.name);
                     setScreen('builder');
                   }}
-                  className="flex items-center gap-2 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition"
+                  className="flex items-center gap-2 bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 font-medium transition"
                 >
                   <Plus className="w-5 h-5" />
                   New Topic
@@ -368,41 +365,41 @@ export default function FlashcardBuilder() {
           </div>
 
           {selectedSubject.topics.length === 0 ? (
-            <div className="bg-white rounded-2xl shadow-xl p-12 text-center">
+            <div className="bg-white rounded-xl shadow-lg p-12 text-center">
               <BookOpen className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-              <p className="text-gray-600 text-lg">No topics yet. Create your first one!</p>
+              <p className="text-gray-600">No topics yet. Create your first one!</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {selectedSubject.topics.map((topic, idx) => (
                 <div key={idx} className="bg-white rounded-xl shadow-lg p-5 hover:shadow-xl transition">
-                  <h3 className="font-semibold text-lg text-gray-700 mb-2">{topic.name}</h3>
+                  <h3 className="font-bold text-lg text-gray-900 mb-2">{topic.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{topic.cards.length} cards</p>
                   <div className="grid grid-cols-2 gap-2">
                     <button
                       onClick={() => startQuiz(topic.cards)}
-                      className="flex items-center justify-center gap-1 bg-indigo-600 text-white py-2 px-3 rounded-lg hover:bg-indigo-700 transition text-sm"
+                      className="flex items-center justify-center gap-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 font-medium transition"
                     >
                       <Play className="w-4 h-4" />
                       Quiz
                     </button>
                     <button
                       onClick={() => editStack(selectedSubject.name, topic.name)}
-                      className="flex items-center justify-center gap-1 bg-blue-600 text-white py-2 px-3 rounded-lg hover:bg-blue-700 transition text-sm"
+                      className="flex items-center justify-center gap-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 font-medium transition"
                     >
                       <Edit className="w-4 h-4" />
                       Edit
                     </button>
                     <button
                       onClick={() => handleExportTopic(selectedSubject.name, topic)}
-                      className="flex items-center justify-center gap-1 bg-green-600 text-white py-2 px-3 rounded-lg hover:bg-green-700 transition text-sm"
+                      className="flex items-center justify-center gap-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 font-medium transition"
                     >
                       <Download className="w-4 h-4" />
                       Export
                     </button>
                     <button
                       onClick={() => deleteTopic(selectedSubject.name, topic.name)}
-                      className="flex items-center justify-center gap-1 bg-red-600 text-white py-2 px-3 rounded-lg hover:bg-red-700 transition text-sm"
+                      className="flex items-center justify-center gap-1 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 font-medium transition"
                     >
                       <Trash2 className="w-4 h-4" />
                       Delete
@@ -419,18 +416,18 @@ export default function FlashcardBuilder() {
 
   if (screen === 'builder') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 p-6">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-6 mb-6">
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
             <div className="flex justify-between items-center mb-6">
               <button
                 onClick={() => setScreen(selectedSubject ? 'subjectView' : 'dashboard')}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-800"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Back
               </button>
-              <h1 className="text-3xl font-bold text-gray-800">
+              <h1 className="text-3xl font-bold text-gray-900">
                 {editingStack ? 'Edit Topic' : 'New Topic'}
               </h1>
               <div className="w-20"></div>
@@ -479,7 +476,7 @@ export default function FlashcardBuilder() {
 
               <button
                 onClick={addCard}
-                className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2"
+                className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 font-medium transition flex items-center justify-center gap-2"
               >
                 <Plus className="w-5 h-5" />
                 {editingCard !== null ? 'Update Card' : 'Add Card'}
@@ -489,12 +486,12 @@ export default function FlashcardBuilder() {
             {currentCards.length > 0 && (
               <div>
                 <div className="border-t-2 border-gray-200 pt-6 mb-6">
-                  <h2 className="text-xl font-bold text-gray-800 mb-4">Cards ({currentCards.length})</h2>
+                  <h2 className="text-xl font-bold text-gray-900 mb-4">Cards ({currentCards.length})</h2>
                   <div className="space-y-3 max-h-96 overflow-y-auto">
                     {currentCards.map((card, idx) => (
                       <div key={idx} className="border-2 border-gray-200 rounded-lg p-4 hover:border-indigo-400 transition">
                         <div className="flex justify-between items-start mb-2">
-                          <span className="text-xs font-semibold text-indigo-600 uppercase">{card.type}</span>
+                          <span className="text-xs font-bold text-indigo-600 uppercase">{card.type}</span>
                           <div className="flex gap-2">
                             <button
                               onClick={() => editCard(idx)}
@@ -510,8 +507,8 @@ export default function FlashcardBuilder() {
                             </button>
                           </div>
                         </div>
-                        <p className="font-semibold text-gray-800 mb-1">Q: {card.question}</p>
-                        <p className="text-gray-600 text-sm">A: {card.answer}</p>
+                        <p className="font-bold text-gray-900 mb-1">Q: {card.question}</p>
+                        <p className="text-gray-600">A: {card.answer}</p>
                       </div>
                     ))}
                   </div>
@@ -519,7 +516,7 @@ export default function FlashcardBuilder() {
 
                 <button
                   onClick={saveStack}
-                  className="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition font-semibold"
+                  className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 font-bold transition"
                 >
                   Save Topic
                 </button>
@@ -535,26 +532,26 @@ export default function FlashcardBuilder() {
     const currentCard = quizCards[quizIndex];
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl w-full">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-4">
+        <div className="bg-white rounded-xl shadow-xl p-8 max-w-2xl w-full">
           <div className="flex justify-between items-center mb-6">
             <button
               onClick={() => setScreen('subjectView')}
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-800"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
             >
               <Home className="w-5 h-5" />
               Exit
             </button>
-            <span className="text-gray-600 font-semibold">
+            <span className="text-gray-600 font-medium">
               Question {quizIndex + 1} of {quizCards.length}
             </span>
           </div>
 
           <div className="mb-6">
-            <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
               {currentCard.type.toUpperCase()}
             </span>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">{currentCard.question}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{currentCard.question}</h2>
           </div>
 
           <textarea
@@ -566,8 +563,8 @@ export default function FlashcardBuilder() {
 
           {showAnswer && (
             <div className="bg-green-50 border-2 border-green-300 rounded-lg p-4 mb-4">
-              <p className="font-semibold text-green-800 mb-2">Correct Answer:</p>
-              <p className="text-gray-800">{currentCard.answer}</p>
+              <p className="font-bold text-green-800 mb-2">Correct Answer:</p>
+              <p className="text-gray-900">{currentCard.answer}</p>
             </div>
           )}
 
@@ -575,14 +572,14 @@ export default function FlashcardBuilder() {
             {!showAnswer ? (
               <button
                 onClick={() => setShowAnswer(true)}
-                className="flex-1 bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition font-semibold"
+                className="flex-1 bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 font-bold transition"
               >
                 Show Answer
               </button>
             ) : (
               <button
                 onClick={nextQuestion}
-                className="flex-1 bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition font-semibold"
+                className="flex-1 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 font-bold transition"
               >
                 {quizIndex < quizCards.length - 1 ? 'Next Question' : 'Finish Quiz'}
               </button>
