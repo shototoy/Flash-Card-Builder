@@ -32,9 +32,6 @@ Created by **Jule Cyrus Fernandez** to address the need for a straightforward st
 ## 💾 Data Storage
 All flashcard data is stored in **React state** during your session. Use the **Export JSON** feature to save your work permanently. Import the JSON file in future sessions to restore your flashcards.
 > 💡 **Tip**: Regularly export your flashcards to avoid losing your work!
----
-## 📄 JSON Format
-
 ```json
 {
   "subjects": [
@@ -56,30 +53,7 @@ All flashcard data is stored in **React state** during your session. Use the **E
   ]
 }
 ```
-
----
-
-## 📸 Screenshots
-
-<div align="center">
-
-### Start Screen
-*Import existing flashcards or start fresh*
-
-### Dashboard
-*View all subjects and topics at a glance*
-
-### Card Builder
-*Create and organize your flashcards*
-
-### Quiz Mode
-*Test your knowledge with randomized questions*
-
-</div>
-
-## 📝 License
 Free to use for **personal and educational purposes**
-## **Jule Cyrus Fernandez**
 Built with ❤️ and the goal of making exam preparation simpler and more accessible.
 ---
 <div align="center">
