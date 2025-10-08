@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**A simple, database-free flashcard application for efficient exam preparation**
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About
+Created by **Jule Cyrus Fernandez** to address the need for a straightforward study tool during exam preparation. This project focuses on **ease of use** without the complexity of backend databases or server configurations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> *"Study smarter, not harder - with zero setup time."*
 
-### `npm test`
+## Features
+- **No Database Required** - All data stored locally in browser memory
+- **Subject & Topic Organization** - Structure your study materials logically
+- **Multiple Question Types** - Support for identification and enumeration questions
+- **Randomized Quizzes** - Test yourself with shuffled questions
+- **Simple Interface** - Clean, intuitive design for distraction-free studying
+---
+## 🛠️ Tech Stack
+| Technology | Purpose |
+|------------|---------|
+| **React JS** | Component-based UI framework |
+| **Tailwind CSS** | Utility-first styling |
+| **Lucide React** | Beautiful icon library |
+---
+## 💾 Data Storage
+All flashcard data is stored in **React state** during your session. Use the **Export JSON** feature to save your work permanently. Import the JSON file in future sessions to restore your flashcards.
+> 💡 **Tip**: Regularly export your flashcards to avoid losing your work!
+```json
+{
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "topics": [
+        {
+          "name": "Algebra",
+          "cards": [
+            {
+              "question": "What is x in 2x + 4 = 10?",
+              "answer": "x = 3",
+              "type": "identification"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+Free to use for **personal and educational purposes**
+Built with ❤️ and the goal of making exam preparation simpler and more accessible.
+---
+<div align="center">
+### ⭐ If this helped you study, consider giving it a star!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Happy Studying! 📚✨**
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</div>
